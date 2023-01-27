@@ -13,6 +13,19 @@
 		4436285B2983CC8300C718A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443628592983CC8300C718A9 /* Main.storyboard */; };
 		4436285D2983CC8400C718A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4436285C2983CC8400C718A9 /* Assets.xcassets */; };
 		443628602983CC8400C718A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4436285E2983CC8400C718A9 /* LaunchScreen.storyboard */; };
+		4436286C2983CD2500C718A9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436286B2983CD2500C718A9 /* MainViewController.swift */; };
+		4436286E2983CDD500C718A9 /* TableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436286D2983CDD500C718A9 /* TableViewViewModel.swift */; };
+		443628722983CED700C718A9 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628712983CED700C718A9 /* MainTableViewCell.swift */; };
+		443628762983D0B800C718A9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628752983D0B800C718A9 /* NetworkService.swift */; };
+		443628792983D50500C718A9 /* PlayListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628782983D50500C718A9 /* PlayListDTO.swift */; };
+		4436287B2983D52D00C718A9 /* PlayListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436287A2983D52D00C718A9 /* PlayListModel.swift */; };
+		4436287D2983D63600C718A9 /* MainSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436287C2983D63600C718A9 /* MainSearchController.swift */; };
+		443628832983E64900C718A9 /* TableViewViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628822983E64900C718A9 /* TableViewViewModelProtocol.swift */; };
+		443628862983E6BF00C718A9 /* TableViewCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628852983E6BF00C718A9 /* TableViewCellViewModelProtocol.swift */; };
+		443628882983E87500C718A9 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628872983E87500C718A9 /* TableViewCellViewModel.swift */; };
+		4436288B2983F6BA00C718A9 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436288A2983F6BA00C718A9 /* Box.swift */; };
+		4436288D2984036900C718A9 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436288C2984036900C718A9 /* Networking.swift */; };
+		4436288F298406C300C718A9 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436288E298406C200C718A9 /* DataFetcherService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +37,19 @@
 		4436285C2983CC8400C718A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4436285F2983CC8400C718A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		443628612983CC8400C718A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4436286B2983CD2500C718A9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4436286D2983CDD500C718A9 /* TableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModel.swift; sourceTree = "<group>"; };
+		443628712983CED700C718A9 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		443628752983D0B800C718A9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		443628782983D50500C718A9 /* PlayListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListDTO.swift; sourceTree = "<group>"; };
+		4436287A2983D52D00C718A9 /* PlayListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListModel.swift; sourceTree = "<group>"; };
+		4436287C2983D63600C718A9 /* MainSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchController.swift; sourceTree = "<group>"; };
+		443628822983E64900C718A9 /* TableViewViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModelProtocol.swift; sourceTree = "<group>"; };
+		443628852983E6BF00C718A9 /* TableViewCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelProtocol.swift; sourceTree = "<group>"; };
+		443628872983E87500C718A9 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
+		4436288A2983F6BA00C718A9 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		4436288C2984036900C718A9 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		4436288E298406C200C718A9 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +82,116 @@
 		443628522983CC8300C718A9 /* FirstFormTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				4436287E2983D70300C718A9 /* App */,
+				443628772983D4F400C718A9 /* Classes */,
+				4436286A2983CD0D00C718A9 /* Controllers */,
+				443628842983E69C00C718A9 /* Protocols */,
+				443628732983D09600C718A9 /* Services */,
+				443628892983F40600C718A9 /* Models */,
+				4436286F2983CE9C00C718A9 /* View */,
+				443628672983CCA300C718A9 /* ViewModel */,
+				4436287F2983D71C00C718A9 /* Other */,
+			);
+			path = FirstFormTestApp;
+			sourceTree = "<group>";
+		};
+		443628672983CCA300C718A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4436286D2983CDD500C718A9 /* TableViewViewModel.swift */,
+				443628872983E87500C718A9 /* TableViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4436286A2983CD0D00C718A9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4436286B2983CD2500C718A9 /* MainViewController.swift */,
+				4436287C2983D63600C718A9 /* MainSearchController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4436286F2983CE9C00C718A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				443628702983CEA800C718A9 /* TableCells */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		443628702983CEA800C718A9 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				443628712983CED700C718A9 /* MainTableViewCell.swift */,
+			);
+			name = TableCells;
+			sourceTree = "<group>";
+		};
+		443628732983D09600C718A9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				443628742983D0A500C718A9 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		443628742983D0A500C718A9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				443628752983D0B800C718A9 /* NetworkService.swift */,
+				4436288C2984036900C718A9 /* Networking.swift */,
+				4436288E298406C200C718A9 /* DataFetcherService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		443628772983D4F400C718A9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				443628782983D50500C718A9 /* PlayListDTO.swift */,
+				4436288A2983F6BA00C718A9 /* Box.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4436287E2983D70300C718A9 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				443628532983CC8300C718A9 /* AppDelegate.swift */,
 				443628552983CC8300C718A9 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4436287F2983D71C00C718A9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
 				443628572983CC8300C718A9 /* ViewController.swift */,
 				443628592983CC8300C718A9 /* Main.storyboard */,
 				4436285C2983CC8400C718A9 /* Assets.xcassets */,
 				4436285E2983CC8400C718A9 /* LaunchScreen.storyboard */,
 				443628612983CC8400C718A9 /* Info.plist */,
 			);
-			path = FirstFormTestApp;
+			path = Other;
+			sourceTree = "<group>";
+		};
+		443628842983E69C00C718A9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				443628822983E64900C718A9 /* TableViewViewModelProtocol.swift */,
+				443628852983E6BF00C718A9 /* TableViewCellViewModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		443628892983F40600C718A9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4436287A2983D52D00C718A9 /* PlayListModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +266,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				443628582983CC8300C718A9 /* ViewController.swift in Sources */,
+				4436288B2983F6BA00C718A9 /* Box.swift in Sources */,
+				4436287D2983D63600C718A9 /* MainSearchController.swift in Sources */,
+				443628792983D50500C718A9 /* PlayListDTO.swift in Sources */,
+				443628762983D0B800C718A9 /* NetworkService.swift in Sources */,
 				443628542983CC8300C718A9 /* AppDelegate.swift in Sources */,
+				4436288D2984036900C718A9 /* Networking.swift in Sources */,
+				4436287B2983D52D00C718A9 /* PlayListModel.swift in Sources */,
+				443628722983CED700C718A9 /* MainTableViewCell.swift in Sources */,
 				443628562983CC8300C718A9 /* SceneDelegate.swift in Sources */,
+				443628882983E87500C718A9 /* TableViewCellViewModel.swift in Sources */,
+				4436286E2983CDD500C718A9 /* TableViewViewModel.swift in Sources */,
+				4436286C2983CD2500C718A9 /* MainViewController.swift in Sources */,
+				443628862983E6BF00C718A9 /* TableViewCellViewModelProtocol.swift in Sources */,
+				443628832983E64900C718A9 /* TableViewViewModelProtocol.swift in Sources */,
+				4436288F298406C300C718A9 /* DataFetcherService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +431,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U2N97D98Q8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FirstFormTestApp/Info.plist;
+				INFOPLIST_FILE = FirstFormTestApp/Other/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +459,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U2N97D98Q8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FirstFormTestApp/Info.plist;
+				INFOPLIST_FILE = FirstFormTestApp/Other/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
