@@ -7,22 +7,23 @@
 
 import Foundation
 
-final class TableViewCellViewModel: TableViewCellViewModelProtocol {
+struct TableViewCellViewModel: TableViewCellViewModelProtocol {
 
     private var album: Album
     
-    var textChanged: Box<String?> = Box(nil)
-    
-    var title: String {
+    var title: String? {
         return album.title
     }
     
-    var subTitle: String {
+    var subTitle: String? {
         return album.subtitle
     }
     
-    var imageName: String {
-        album.image
+    var imageURL: URL? {
+        if let imageURLString = album.image {
+            return URL(string: imageURLString)
+        }
+        return nil 
     }
     
     init(album: Album) {

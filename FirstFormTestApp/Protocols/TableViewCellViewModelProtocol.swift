@@ -7,10 +7,8 @@
 
 import Foundation
 
-protocol TableViewCellViewModelProtocol: AnyObject {
-    var title: String { get }
-    var subTitle: String { get }
-    var imageName: String { get }
-    
-    var textChanged: Box<String?> { get }
+protocol TableViewCellViewModelProtocol {
+    var title: String? { get }
+    var subTitle: String? { get }
+    var imageURL: URL? { get }
 }

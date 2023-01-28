@@ -19,13 +19,13 @@
 		443628762983D0B800C718A9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628752983D0B800C718A9 /* NetworkService.swift */; };
 		443628792983D50500C718A9 /* PlayListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628782983D50500C718A9 /* PlayListDTO.swift */; };
 		4436287B2983D52D00C718A9 /* PlayListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436287A2983D52D00C718A9 /* PlayListModel.swift */; };
-		4436287D2983D63600C718A9 /* MainSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436287C2983D63600C718A9 /* MainSearchController.swift */; };
 		443628832983E64900C718A9 /* TableViewViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628822983E64900C718A9 /* TableViewViewModelProtocol.swift */; };
 		443628862983E6BF00C718A9 /* TableViewCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628852983E6BF00C718A9 /* TableViewCellViewModelProtocol.swift */; };
 		443628882983E87500C718A9 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628872983E87500C718A9 /* TableViewCellViewModel.swift */; };
 		4436288B2983F6BA00C718A9 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436288A2983F6BA00C718A9 /* Box.swift */; };
 		4436288D2984036900C718A9 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436288C2984036900C718A9 /* Networking.swift */; };
 		4436288F298406C300C718A9 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436288E298406C200C718A9 /* DataFetcherService.swift */; };
+		4436289129844CF500C718A9 /* ImageCash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436289029844CF500C718A9 /* ImageCash.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,13 +43,13 @@
 		443628752983D0B800C718A9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		443628782983D50500C718A9 /* PlayListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListDTO.swift; sourceTree = "<group>"; };
 		4436287A2983D52D00C718A9 /* PlayListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListModel.swift; sourceTree = "<group>"; };
-		4436287C2983D63600C718A9 /* MainSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchController.swift; sourceTree = "<group>"; };
 		443628822983E64900C718A9 /* TableViewViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModelProtocol.swift; sourceTree = "<group>"; };
 		443628852983E6BF00C718A9 /* TableViewCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelProtocol.swift; sourceTree = "<group>"; };
 		443628872983E87500C718A9 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 		4436288A2983F6BA00C718A9 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		4436288C2984036900C718A9 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		4436288E298406C200C718A9 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
+		4436289029844CF500C718A9 /* ImageCash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCash.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				4436286B2983CD2500C718A9 /* MainViewController.swift */,
-				4436287C2983D63600C718A9 /* MainSearchController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -152,6 +151,7 @@
 			children = (
 				443628782983D50500C718A9 /* PlayListDTO.swift */,
 				4436288A2983F6BA00C718A9 /* Box.swift */,
+				4436289029844CF500C718A9 /* ImageCash.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -267,7 +267,6 @@
 			files = (
 				443628582983CC8300C718A9 /* ViewController.swift in Sources */,
 				4436288B2983F6BA00C718A9 /* Box.swift in Sources */,
-				4436287D2983D63600C718A9 /* MainSearchController.swift in Sources */,
 				443628792983D50500C718A9 /* PlayListDTO.swift in Sources */,
 				443628762983D0B800C718A9 /* NetworkService.swift in Sources */,
 				443628542983CC8300C718A9 /* AppDelegate.swift in Sources */,
@@ -278,6 +277,7 @@
 				443628882983E87500C718A9 /* TableViewCellViewModel.swift in Sources */,
 				4436286E2983CDD500C718A9 /* TableViewViewModel.swift in Sources */,
 				4436286C2983CD2500C718A9 /* MainViewController.swift in Sources */,
+				4436289129844CF500C718A9 /* ImageCash.swift in Sources */,
 				443628862983E6BF00C718A9 /* TableViewCellViewModelProtocol.swift in Sources */,
 				443628832983E64900C718A9 /* TableViewViewModelProtocol.swift in Sources */,
 				4436288F298406C300C718A9 /* DataFetcherService.swift in Sources */,

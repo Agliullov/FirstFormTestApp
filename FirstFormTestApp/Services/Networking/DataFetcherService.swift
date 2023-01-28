@@ -15,7 +15,7 @@ class DataFetcherService {
         self.networkDataFetcher = networkDataFetcher
     }
     
-    func fetchPlayLists(completion: @escaping (PlayListModel?) -> Void) {
+    func fetchPlayLists(completion: @escaping (_: PlayListModel?) -> Void) {
         let urlString = "http://test.iospro.ru/playlistdata.json"
         networkDataFetcher.fetchDataFromJSON(urlString: urlString, response: completion)
     }
