@@ -86,7 +86,7 @@
 				443628842983E69C00C718A9 /* Protocols */,
 				443628732983D09600C718A9 /* Services */,
 				443628892983F40600C718A9 /* Models */,
-				4436286F2983CE9C00C718A9 /* View */,
+				44A28B412986B5A10048F82B /* Views */,
 				443628672983CCA300C718A9 /* ViewModel */,
 				4436287F2983D71C00C718A9 /* Other */,
 			);
@@ -102,21 +102,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		4436286F2983CE9C00C718A9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4436286B2983CD2500C718A9 /* MainViewController.swift */,
-				443628702983CEA800C718A9 /* TableCells */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		443628702983CEA800C718A9 /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
 				443628712983CED700C718A9 /* MainTableViewCell.swift */,
 			);
 			name = TableCells;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		443628732983D09600C718A9 /* Services */ = {
@@ -184,6 +176,15 @@
 				44A28B3C298637760048F82B /* ImageLoader.swift */,
 			);
 			path = CacheService;
+			sourceTree = "<group>";
+		};
+		44A28B412986B5A10048F82B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4436286B2983CD2500C718A9 /* MainViewController.swift */,
+				443628702983CEA800C718A9 /* TableCells */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
