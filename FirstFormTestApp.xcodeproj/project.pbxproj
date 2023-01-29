@@ -102,15 +102,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		443628702983CEA800C718A9 /* TableCells */ = {
-			isa = PBXGroup;
-			children = (
-				443628712983CED700C718A9 /* MainTableViewCell.swift */,
-			);
-			name = TableCells;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		443628732983D09600C718A9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,10 +172,18 @@
 		44A28B412986B5A10048F82B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				44A28B422986B66B0048F82B /* TableViewCells */,
 				4436286B2983CD2500C718A9 /* MainViewController.swift */,
-				443628702983CEA800C718A9 /* TableCells */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		44A28B422986B66B0048F82B /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				443628712983CED700C718A9 /* MainTableViewCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
