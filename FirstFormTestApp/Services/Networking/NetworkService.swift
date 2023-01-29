@@ -11,7 +11,7 @@ protocol DataFetcher {
     func fetchDataFromJSON<T: Codable>(urlString: String, response: @escaping (T?) -> Void)
 }
 
-class NetworkDataFetcher: DataFetcher {
+final class NetworkDataFetcher: DataFetcher {
     
     private var networking: Networking
     

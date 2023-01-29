@@ -17,15 +17,15 @@
 		4436286E2983CDD500C718A9 /* TableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436286D2983CDD500C718A9 /* TableViewViewModel.swift */; };
 		443628722983CED700C718A9 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628712983CED700C718A9 /* MainTableViewCell.swift */; };
 		443628762983D0B800C718A9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628752983D0B800C718A9 /* NetworkService.swift */; };
-		443628792983D50500C718A9 /* PlayListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628782983D50500C718A9 /* PlayListDTO.swift */; };
 		4436287B2983D52D00C718A9 /* PlayListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436287A2983D52D00C718A9 /* PlayListModel.swift */; };
 		443628832983E64900C718A9 /* TableViewViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628822983E64900C718A9 /* TableViewViewModelProtocol.swift */; };
 		443628862983E6BF00C718A9 /* TableViewCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628852983E6BF00C718A9 /* TableViewCellViewModelProtocol.swift */; };
 		443628882983E87500C718A9 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443628872983E87500C718A9 /* TableViewCellViewModel.swift */; };
-		4436288B2983F6BA00C718A9 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436288A2983F6BA00C718A9 /* Box.swift */; };
 		4436288D2984036900C718A9 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436288C2984036900C718A9 /* Networking.swift */; };
 		4436288F298406C300C718A9 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436288E298406C200C718A9 /* DataFetcherService.swift */; };
-		4436289129844CF500C718A9 /* ImageCash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436289029844CF500C718A9 /* ImageCash.swift */; };
+		4436289129844CF500C718A9 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4436289029844CF500C718A9 /* ImageCache.swift */; };
+		44A28B3D298637760048F82B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A28B3C298637760048F82B /* ImageLoader.swift */; };
+		44A28B402986AF260048F82B /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A28B3F2986AF260048F82B /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,15 +41,15 @@
 		4436286D2983CDD500C718A9 /* TableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModel.swift; sourceTree = "<group>"; };
 		443628712983CED700C718A9 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		443628752983D0B800C718A9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		443628782983D50500C718A9 /* PlayListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListDTO.swift; sourceTree = "<group>"; };
 		4436287A2983D52D00C718A9 /* PlayListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListModel.swift; sourceTree = "<group>"; };
 		443628822983E64900C718A9 /* TableViewViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModelProtocol.swift; sourceTree = "<group>"; };
 		443628852983E6BF00C718A9 /* TableViewCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelProtocol.swift; sourceTree = "<group>"; };
 		443628872983E87500C718A9 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
-		4436288A2983F6BA00C718A9 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		4436288C2984036900C718A9 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		4436288E298406C200C718A9 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
-		4436289029844CF500C718A9 /* ImageCash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCash.swift; sourceTree = "<group>"; };
+		4436289029844CF500C718A9 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		44A28B3C298637760048F82B /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		44A28B3F2986AF260048F82B /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				4436287E2983D70300C718A9 /* App */,
-				443628772983D4F400C718A9 /* Classes */,
-				4436286A2983CD0D00C718A9 /* Controllers */,
 				443628842983E69C00C718A9 /* Protocols */,
 				443628732983D09600C718A9 /* Services */,
 				443628892983F40600C718A9 /* Models */,
@@ -104,17 +102,10 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		4436286A2983CD0D00C718A9 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				4436286B2983CD2500C718A9 /* MainViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		4436286F2983CE9C00C718A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4436286B2983CD2500C718A9 /* MainViewController.swift */,
 				443628702983CEA800C718A9 /* TableCells */,
 			);
 			name = View;
@@ -131,7 +122,9 @@
 		443628732983D09600C718A9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				44A28B3E29863A6F0048F82B /* CacheService */,
 				443628742983D0A500C718A9 /* Networking */,
+				44A28B3F2986AF260048F82B /* Helpers.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -144,16 +137,6 @@
 				4436288E298406C200C718A9 /* DataFetcherService.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		443628772983D4F400C718A9 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				443628782983D50500C718A9 /* PlayListDTO.swift */,
-				4436288A2983F6BA00C718A9 /* Box.swift */,
-				4436289029844CF500C718A9 /* ImageCash.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		4436287E2983D70300C718A9 /* App */ = {
@@ -192,6 +175,15 @@
 				4436287A2983D52D00C718A9 /* PlayListModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		44A28B3E29863A6F0048F82B /* CacheService */ = {
+			isa = PBXGroup;
+			children = (
+				4436289029844CF500C718A9 /* ImageCache.swift */,
+				44A28B3C298637760048F82B /* ImageLoader.swift */,
+			);
+			path = CacheService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,18 +258,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				443628582983CC8300C718A9 /* ViewController.swift in Sources */,
-				4436288B2983F6BA00C718A9 /* Box.swift in Sources */,
-				443628792983D50500C718A9 /* PlayListDTO.swift in Sources */,
 				443628762983D0B800C718A9 /* NetworkService.swift in Sources */,
 				443628542983CC8300C718A9 /* AppDelegate.swift in Sources */,
 				4436288D2984036900C718A9 /* Networking.swift in Sources */,
 				4436287B2983D52D00C718A9 /* PlayListModel.swift in Sources */,
+				44A28B3D298637760048F82B /* ImageLoader.swift in Sources */,
 				443628722983CED700C718A9 /* MainTableViewCell.swift in Sources */,
 				443628562983CC8300C718A9 /* SceneDelegate.swift in Sources */,
 				443628882983E87500C718A9 /* TableViewCellViewModel.swift in Sources */,
 				4436286E2983CDD500C718A9 /* TableViewViewModel.swift in Sources */,
 				4436286C2983CD2500C718A9 /* MainViewController.swift in Sources */,
-				4436289129844CF500C718A9 /* ImageCash.swift in Sources */,
+				44A28B402986AF260048F82B /* Helpers.swift in Sources */,
+				4436289129844CF500C718A9 /* ImageCache.swift in Sources */,
 				443628862983E6BF00C718A9 /* TableViewCellViewModelProtocol.swift in Sources */,
 				443628832983E64900C718A9 /* TableViewViewModelProtocol.swift in Sources */,
 				4436288F298406C300C718A9 /* DataFetcherService.swift in Sources */,

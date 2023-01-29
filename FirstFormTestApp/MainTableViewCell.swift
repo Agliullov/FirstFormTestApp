@@ -52,7 +52,6 @@ final class MainTableViewCell: UITableViewCell {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.alignment = .leading
-        
         stackView.backgroundColor = .clear
         return stackView
     }()

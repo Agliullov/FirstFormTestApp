@@ -1,15 +1,15 @@
 //
-//  ImageCash.swift
+//  ImageCache.swift
 //  FirstFormTestApp
 //
 //  Created by Ильдар Аглиуллов on 27.01.2023.
 //
-import Foundation
-import UIKit.UIImage
+
+import UIKit
 import Combine
 
 // Declares in-memory image cache
-public protocol ImageCacheType: AnyObject {
+protocol ImageCacheType: AnyObject {
     // Returns the image associated with a given url
     func image(for url: URL) -> UIImage?
     // Inserts the image of the specified url in the cache
@@ -22,7 +22,7 @@ public protocol ImageCacheType: AnyObject {
     subscript(_ url: URL) -> UIImage? { get set }
 }
 
-public final class ImageCache: ImageCacheType {
+final class ImageCache: ImageCacheType {
     
     // 1st level cache, that contains encoded images
     private lazy var imageCache: NSCache<AnyObject, AnyObject> = {
@@ -36,21 +36,22 @@ public final class ImageCache: ImageCacheType {
         cache.totalCostLimit = config.memoryLimit
         return cache
     }()
+    
     private let lock = NSLock()
     private let config: Config
     
-    public struct Config {
+    struct Config {
         public let countLimit: Int
         public let memoryLimit: Int
         
         public static let defaultConfig = Config(countLimit: 100, memoryLimit: 1024 * 1024 * 100) // 100 MB
     }
     
-    public init(config: Config = Config.defaultConfig) {
+    init(config: Config = Config.defaultConfig) {
         self.config = config
     }
     
-    public func image(for url: URL) -> UIImage? {
+    func image(for url: URL) -> UIImage? {
         lock.lock(); defer { lock.unlock() }
         // the best case scenario -> there is a decoded image in memory
         if let decodedImage = decodedImageCache.object(forKey: url as AnyObject) as? UIImage {
@@ -65,7 +66,7 @@ public final class ImageCache: ImageCacheType {
         return nil
     }
     
-    public func insertImage(_ image: UIImage?, for url: URL) {
+    func insertImage(_ image: UIImage?, for url: URL) {
         guard let image = image else { return removeImage(for: url) }
         let decompressedImage = image.decodedImage()
         
@@ -74,19 +75,19 @@ public final class ImageCache: ImageCacheType {
         decodedImageCache.setObject(image as AnyObject, forKey: url as AnyObject, cost: decompressedImage.diskSize)
     }
     
-    public func removeImage(for url: URL) {
+    func removeImage(for url: URL) {
         lock.lock(); defer { lock.unlock() }
         imageCache.removeObject(forKey: url as AnyObject)
         decodedImageCache.removeObject(forKey: url as AnyObject)
     }
     
-    public func removeAllImages() {
+    func removeAllImages() {
         lock.lock(); defer { lock.unlock() }
         imageCache.removeAllObjects()
         decodedImageCache.removeAllObjects()
     }
     
-    public subscript(_ key: URL) -> UIImage? {
+    subscript(_ key: URL) -> UIImage? {
         get {
             return image(for: key)
         }
@@ -112,42 +113,5 @@ fileprivate extension UIImage {
     var diskSize: Int {
         guard let cgImage = cgImage else { return 0 }
         return cgImage.bytesPerRow * cgImage.height
-    }
-}
-
-public final class ImageLoader {
-    public static let shared = ImageLoader()
-    
-    private let cache: ImageCacheType
-    private lazy var backgroundQueue: OperationQueue = {
-        let queue = OperationQueue()
-        queue.qualityOfService = .userInteractive
-        queue.maxConcurrentOperationCount = 50
-        return queue
-    }()
-    
-    public init(cache: ImageCacheType = ImageCache()) {
-        self.cache = cache
-    }
-    
-    public func loadImage(from url: URL) -> AnyPublisher<UIImage?, Never> {
-        if let image = cache[url] {
-            return Just(image).eraseToAnyPublisher()
-        }
-        return URLSession.shared.dataTaskPublisher(for: url)
-            .map { (data, response) -> UIImage? in return UIImage(data: data) }
-            .catch { error in return Just(nil) }
-            .handleEvents(receiveOutput: {[unowned self] image in
-                guard let image = image else { return }
-                self.cache[url] = image
-            })
-            .print("Image loading \(url):")
-            .subscribe(on: backgroundQueue)
-            .receive(on: RunLoop.main)
-            .eraseToAnyPublisher()
-    }
-    
-    func clear() {
-        self.cache.removeAllImages()
     }
 }

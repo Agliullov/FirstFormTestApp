@@ -16,13 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         
-        var startViewController: UIViewController!
-        
-        if let launchedBefore = UserDefaults.standard.object(forKey: "launchedBefore") as? Bool, launchedBefore {
-            startViewController = MainViewController()
-        } else {
-            startViewController = MainViewController()
-        }
+        let startViewController: UIViewController = MainViewController()
         
         let navigationController = UINavigationController(rootViewController: startViewController)
         window?.rootViewController = navigationController

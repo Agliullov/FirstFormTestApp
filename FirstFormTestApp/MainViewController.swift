@@ -33,6 +33,8 @@ final class MainViewController: UIViewController {
         fetchViewModel()
     }
     
+    //MARK: - Private methods
+    
     private func configureSearchController() {
         searchController.searchResultsUpdater = self
         self.navigationItem.searchController = self.searchController
@@ -64,10 +66,10 @@ final class MainViewController: UIViewController {
         let alertViewController = UIAlertController(title: "Редактировать название", message: "", preferredStyle: .alert)
         alertViewController.addTextField { textField in
             textField.text = title
-            textField.placeholder = "Enter"
+            textField.placeholder = "Введите текст"
             textField.becomeFirstResponder()
         }
-        let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self] alertAction in
+        let saveAction = UIAlertAction(title: "Готово", style: .default) { [weak self] alertAction in
             guard let self = self else { return }
             let textField = alertViewController.textFields![0] as UITextField
             let text = textField.text
@@ -76,7 +78,7 @@ final class MainViewController: UIViewController {
                 self.tableView.reloadData()
             }
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
         alertViewController.addAction(saveAction)
         alertViewController.addAction(cancelAction)
         self.present(alertViewController, animated: true, completion: nil)
@@ -108,16 +110,19 @@ extension MainViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
-        let editAction = UIAction(title: "Редактировать", image: UIImage(systemName: "pencil")) { _ in // pencil
+        let editAction = UIAction(title: "Редактировать", image: UIImage(systemName: "pencil")) { _ in
             self.showAlertForModel(at: indexPath)
         }
-        let cancelAction = UIAction(title: "Скрыть", image: UIImage(systemName: "pencil")) { _ in }
+        let cancelAction = UIAction(title: "Скрыть", image: UIImage(systemName: "arrowshape.turn.up.backward.circle")) { _ in }
         
-        let actionProvider: UIContextMenuActionProvider = { _ in return UIMenu(title: "", image: nil, identifier: nil, options: .singleSelection, children: [editAction, cancelAction]) }
+        let actionProvider: UIContextMenuActionProvider = { _ in
+            return UIMenu(title: "", image: nil, identifier: nil, options: .singleSelection, children: [editAction, cancelAction])
+        }
         return UIContextMenuConfiguration(identifier: nil, previewProvider: nil, actionProvider: actionProvider)
     }
 }
 
+//MARK: - UISearchResultsUpdating
 extension MainViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         self.viewModel?.filterBy(text: searchController.searchBar.text ?? "")
